@@ -1,0 +1,10 @@
+# Core dependencies
+Pillow>=10.0.0
+
+# Video compression (FFmpeg is required as system dependency)
+# Note: ffmpeg-python is optional, we'll use subprocess to call ffmpeg directly
+
+# Development dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+

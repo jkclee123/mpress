@@ -1,9 +1,23 @@
 [project]
 name = "mpress"
 version = "0.1.0"
-description = "Add your description here"
+description = "Command-line tool for compressing media files (PNG, JPG, JPEG, MOV, MP4, WebM)"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 dependencies = [
-    "ruff>=0.14.6",
+    "Pillow>=10.0.0",
 ]
+
+[project.scripts]
+mpress = "mpress.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mpress"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
