@@ -1,18 +1,13 @@
 <!--
 Sync Impact Report:
-Version change: N/A → 1.0.0 (initial constitution)
-Principles added:
-  - I. Code Quality
-  - II. Testing Standards (NON-NEGOTIABLE)
-  - III. User Experience Consistency
-  - IV. Performance Requirements
-Sections added:
-  - Additional Constraints
-  - Development Workflow
+Version change: 1.0.0 → 1.0.1 (tooling constraint addition)
+Principles modified: None
+Sections modified:
+  - Additional Constraints (added uv requirement)
 Templates requiring updates:
-  ✅ plan-template.md (Constitution Check section aligned)
-  ✅ spec-template.md (no changes needed - already includes testing requirements)
-  ✅ tasks-template.md (no changes needed - already includes test organization)
+  ✅ plan-template.md (no changes needed)
+  ✅ spec-template.md (no changes needed)
+  ✅ tasks-template.md (no changes needed)
 Follow-up TODOs: None
 -->
 
@@ -92,6 +87,11 @@ JPG, JPEG, MOV, MP4, WebM) with format preservation. Compression algorithms
 MUST balance file size reduction with quality preservation appropriate for
 each media type. The tool MUST not require user configuration or settings files.
 
+For Python projects, Python MUST always be executed using `uv run` and packages
+MUST be installed using `uv pip`. Direct `python` or `pip` commands are
+prohibited. This ensures consistent dependency management and reproducible
+environments across all development and CI/CD workflows.
+
 ## Development Workflow
 
 All code changes MUST undergo peer review before merge. Pull requests MUST
@@ -112,4 +112,4 @@ for clarifications. All pull requests and code reviews MUST verify compliance
 with constitution principles. Complexity additions MUST be justified with
 explicit rationale when they conflict with simplicity goals.
 
-**Version**: 1.0.0 | **Ratified**: 2025-01-27 | **Last Amended**: 2025-01-27
+**Version**: 1.0.1 | **Ratified**: 2025-01-27 | **Last Amended**: 2025-01-27
