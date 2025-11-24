@@ -9,12 +9,6 @@
 **/*.webm
 **/*.wmv
 **/*.flv
-**/*.mov
-**/*.mp4
-**/*.avi
-**/*.mkv
-**/*.webm
-**/*.wmv
 
 # OS generated files
 .DS_Store
