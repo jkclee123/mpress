@@ -1,0 +1,26 @@
+# Media files
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.mov
+**/*.mp4
+**/*.avi
+**/*.mkv
+**/*.webm
+**/*.wmv
+**/*.flv
+**/*.mov
+**/*.mp4
+**/*.avi
+**/*.mkv
+**/*.webm
+**/*.wmv
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
