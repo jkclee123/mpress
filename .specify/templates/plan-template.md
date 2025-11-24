@@ -31,7 +31,21 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+**Code Quality**: Verify proposed approach supports maintainable, well-structured
+code with clear responsibilities. Confirm linting/static analysis tools are
+identified.
+
+**Testing Standards**: Confirm TDD approach is planned. Verify test framework
+selection supports unit tests (80% coverage target) and integration tests for
+user stories. Ensure test strategy covers all edge cases from specification.
+
+**User Experience Consistency**: Verify error handling strategy provides clear,
+actionable messages. Confirm atomic file operations are planned (no partial
+writes). Validate command-line interface design follows Unix conventions.
+
+**Performance Requirements**: Establish performance benchmarks for target media
+formats and file sizes. Verify memory-efficient processing approach (streaming
+or chunked) is planned for large files. Confirm performance testing strategy.
 
 ## Project Structure
 
