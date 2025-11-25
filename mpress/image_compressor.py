@@ -36,9 +36,14 @@ def compress_png(input_path: Path, output_path: Optional[Path] = None) -> Path:
         with Image.open(input_path) as img:
             # Quantize to reduce file size (max 256 colors)
             # This effectively converts to P mode (palette-based)
-            # Method 2 (MAXCOVERAGE) usually provides better quality
+            # For RGBA images, only FASTOCTREE (method 2) or LIBIMAGEQUANT (method 3) are valid
             if img.mode != "P":
-                img = img.quantize(colors=256, method=Image.Quantize.MAXCOVERAGE)
+                if img.mode == "RGBA":
+                    # Use FASTOCTREE for RGBA images (method 2)
+                    img = img.quantize(colors=256, method=Image.Quantize.FASTOCTREE)
+                else:
+                    # Use MAXCOVERAGE for other modes (method 1) - better quality
+                    img = img.quantize(colors=256, method=Image.Quantize.MAXCOVERAGE)
 
             img.save(
                 output_path,
